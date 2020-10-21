@@ -17,7 +17,9 @@ class App extends Component {
     };
     return (
       <div id="main">
-        <button onClick={handleClick}>Hello</button>
+        <button onClick={handleClick} id="click">
+          Hello
+        </button>
         <p id="para">{this.state.text}</p>
       </div>
     );
