@@ -4,23 +4,23 @@ import "../styles/App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      text: ""
-    };
+    this.state = { para: "" };
   }
-
   render() {
-    let handleClick = () => {
-      this.setState({
-        text: `Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy`
-      });
-    };
     return (
       <div id="main">
-        <button onClick={handleClick} id="click">
-          Hello
+        <button
+          id="click"
+          onClick={() =>
+            this.setState({
+              para:
+                "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+            })
+          }
+        >
+          Button
         </button>
-        <p id="para">{this.state.text}</p>
+        {this.state.para ? <p>{this.state.para}</p> : ""}
       </div>
     );
   }
